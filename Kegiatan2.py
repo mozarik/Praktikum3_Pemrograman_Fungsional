@@ -23,28 +23,36 @@ isi = [{'nama': 'Zein', 'jurusan': 'Informatika', 'semester': '2', 'angkatan': '
 #             inputan = input(f"Masukan data pada baris dictionary {k}: ")
 #             x.update((k, inputan) for k, v in x.items() if v == '')
 
-for i in range(len(isi)):
-    if isi[i]['angkatan'] == '':
-        k1 = input(isi[i]['nama'] + ' Angkatan Tahun Berapa :')
-        isi[i]['angkatan'] = k1
+# for i in range(len(isi)):
+#     if isi[i]['angkatan'] == '':
+#         k1 = input(isi[i]['nama'] + ' Angkatan Tahun Berapa :')
+#         isi[i]['angkatan'] = k1
 
-for i in range(len(isi)):
-    if isi[i]['nama'] == '':
-        k1 = input('Jurusan ' + isi[i]['jurusan'] + ' Siapa :')
-        isi[i]['nama'] = k1
+# for i in range(len(isi)):
+#     if isi[i]['nama'] == '':
+#         k1 = input('Jurusan ' + isi[i]['jurusan'] + ' Siapa :')
+#         isi[i]['nama'] = k1
 
-for i in range(len(isi)):
-    if isi[i]['jurusan'] == '':
-        k1 = input(isi[i]['nama'] + ' Jurusan apa :')
-        isi[i]['jurusan'] = k1
+# for i in range(len(isi)):
+#     if isi[i]['jurusan'] == '':
+#         k1 = input(isi[i]['nama'] + ' Jurusan apa :')
+#         isi[i]['jurusan'] = k1
 
-for i in range(len(isi)):
-    if isi[i]['semester'] == '':
-        k1 = input(isi[i]['nama'] + ' Semester Berapa :')
-        isi[i]['semester'] = k1
+# for i in range(len(isi)):
+#     if isi[i]['semester'] == '':
+#         k1 = input(isi[i]['nama'] + ' Semester Berapa :')
+#         isi[i]['semester'] = k1
 
-for j in range(len(isi)):
-    print(isi[j])
+# for j in range(len(isi)):
+#     print(isi[j])
+
+for x in range(len(isi)):
+    for k, v in isi[x].items():
+        if v == '':
+            key = str(k)
+            print(f'data pada {key} dictionary ke-{x} kosong')
+            inputan = input("Value : ")
+            isi[x][k] = inputan
 
 # for i in range(len(data)):
 #     if data[i]['angkatan'] == '':
